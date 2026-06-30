@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+    <title>PixelWise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>PixelWise mit Loginsystem von Philipp Klimaschewski</h1>
+        <div id="auth-bar">
+            <span id="user-greeting" class="hidden"></span>
+            <button id="btn-logout" class="hidden">Abmelden</button>
+            <button id="btn-open-login">Anmelden</button>
+        </div>
+    </div>
+
+    <!-- Anmelden und Registrierungs Pop-up -->
+    <div id="auth-popup" class="popup-overlay hidden">
+        <div class="popup">
+            <div class="popup-tabs">
+                <button class="tab-btn active" data-tab="login">Anmelden</button>
+                <button class="tab-btn" data-tab="register">Registrieren</button>
+            </div>
+
+            <!-- Anmelde Tab -->
+            <div id="tab-login" class="tab-panel">
+                <h2>Anmelden</h2>
+                <label>Benutzername<input id="login-username" type="text" autocomplete="username"></label>
+                <label>Passwort<input id="login-password" type="password" autocomplete="current-password"></label>
+                <div id="login-error" class="form-error hidden"></div>
+                <button id="btn-login">Anmelden</button>
+            </div>
+            
+            <!-- Registrierungs Tab -->
+            <div id="tab-register" class="tab-panel hidden">
+                <h2>Registrieren</h2>
+                <label>Benutzername<input id="reg-username" type="text" autocomplete="username"></label>
+                <label>Passwort<input id="reg-password" type="password" autocomplete="new-password"></label>
+                <div id="reg-error" class="form-error hidden"></div>
+                <div id="reg-success" class="form-success hidden"></div>
+                <button id="btn-register">Registrieren</button>
+            </div>
+            
+            <!-- Anmelden und Registrierungs Pop-up Schließen -->
+            <button class="popup-close" id="btn-close-popup">✕</button>
+        </div>
+    </div>
+
+    <p>Zeichne eine Ziffer und klicke dann auf Klassifizieren.</p>
+    <canvas id="pad" width="280" height="280"></canvas>
+    <div class="controls">
+        <button id="classify">Klassifizieren</button>
+        <button id="clear">Zurücksetzen</button>
+    </div>
+    <div id="result"></div>
+    <h2>Letzte Vorhersagen</h2>
+    <ul id="history"></ul>
+    <script src="app.js"></script>
+</body>
+</html>

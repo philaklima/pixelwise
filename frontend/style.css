@@ -1,0 +1,125 @@
+body {
+    font-family: system-ui, sans-serif;
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+canvas {
+    border: 1px solid #20dfff;
+    background: #fff;
+    touch-action: none;
+    display: block;
+}
+.controls { margin: 0.5rem 0 1rem 0; }
+button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+#result {
+    font-size: 1.25rem;
+    min-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+#history li { font-family: monospace; }
+
+/* Auth bar */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.header h1 { margin: 0; }
+#auth-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+#user-greeting { font-size: 0.95rem; color: #ff3fd2; }
+.hidden { display: none !important; }
+
+/* Pop Up */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(18, 8, 33, 0.56);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.popup {
+    background: #f8f6ff;
+    border-radius: 8px;
+    padding: 2rem 2rem 1.5rem;
+    width: 320px;
+    max-width: 95vw;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(180, 28, 194, 0.22);
+}
+.popup-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+}
+.popup-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+.tab-btn {
+    flex: 1;
+    padding: 0.4rem 0;
+    background: #e9fbff;
+    border: 1px solid #84e5ff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin: 0;
+}
+.tab-btn.active {
+    background: #db2fca;
+    color: #fff;
+    border-color: #db2fca;
+}
+.tab-panel h2 { margin-top: 0; font-size: 1.1rem; }
+.tab-panel label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+.tab-panel input {
+    padding: 0.45rem 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #84e5ff;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tab-panel button {
+    margin-top: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form-error {
+    color: rgb(232, 24, 146);
+    font-size: 0.88rem;
+    margin-bottom: 0.5rem;
+}
+.form-success {
+    color: rgb(0, 208, 199);
+    font-size: 0.88rem;
+    margin-bottom: 0.5rem;
+}
